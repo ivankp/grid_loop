@@ -16,11 +16,9 @@ int main(int argc, char **argv) {
 
     int i = row_min;
 
-    if (0<=i) {
-      for (int j=max(col_min,0); j<=min(col_max,ncol-1); ++j) {
-        //if (0<=j && j<ncol)
-          printf("a(%d,%d) ",i,j);
-      }
+    if (i>=0) {
+      for (int j=max(col_min,0); j<=min(col_max,ncol-1); ++j)
+        printf("a(%d,%d) ",i,j);
       ++i;
     } else i=0;
 
@@ -38,7 +36,9 @@ int main(int argc, char **argv) {
   
   printf("************************\n");
   
-/*  for (int i=0; i<nrow; ++i) {
+/*
+  // loop over the rest
+  for (int i=0; i<nrow; ++i) {
     for (int j=0; j<ncol; ++j) {
       if (abs(row-i)>=3 || abs(col-j)>=3)
         printf("(%d,%d) ",i,j);
