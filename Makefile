@@ -2,7 +2,7 @@ CFLAGS := -Wall
 
 .PHONY: all clean check
 
-EXE := grid_loop
+EXE := rect cyl
 
 all: $(EXE) check
 
